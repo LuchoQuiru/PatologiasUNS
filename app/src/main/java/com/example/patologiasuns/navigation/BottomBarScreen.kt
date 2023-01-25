@@ -21,5 +21,11 @@ sealed class BottomBarScreen(
         title = "Settings",
         icon = Icons.Default.Settings
     )
+    object Detalles : BottomBarScreen(
+        route = "detalles",
+        title = "detalles",
+        icon = Icons.Default.Settings
+    )
+
 
 }

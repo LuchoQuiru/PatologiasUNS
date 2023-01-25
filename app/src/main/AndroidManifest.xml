@@ -14,7 +14,7 @@
         android:theme="@style/Theme.PeopleApp"
         tools:targetApi="31">
         <activity
-            android:name="com.example.patologiasuns.feature_user.presentation.MainActivity"
+            android:name="com.example.patologiasuns.feature_user.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.PeopleApp">

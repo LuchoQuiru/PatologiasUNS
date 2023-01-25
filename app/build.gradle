@@ -83,6 +83,8 @@ dependencies {
     kapt "com.google.dagger:hilt-compiler:$hilt_version"
     implementation("androidx.hilt:hilt-navigation-compose:$hilt_navigation_compose_version")
 
+    //Status bar color
+    implementation "com.google.accompanist:accompanist-systemuicontroller:0.27.0"
 
 
 
