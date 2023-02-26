@@ -7,6 +7,8 @@ class Constants {
         const val SOUNDS_TABLE = "sounds_table"
         const val STEPS_TABLE = "steps_table"
 
+        const val TESTDB = "testdb"
+
         //Screens
         const val SETTING_SRCEEN = "Setting"
         const val UPDATE_SCREEN = "Update mascota"

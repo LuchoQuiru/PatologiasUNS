@@ -7,6 +7,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.example.patologiasuns.feature_detalle.DetalleScreen
+import com.example.patologiasuns.feature_detalle.presentation.components.DetallesContent
 import com.example.patologiasuns.feature_user.presentation.patologias.HomeScreen
 import com.example.patologiasuns.feature_user.presentation.patologias.SettingScreen
 
@@ -23,19 +24,15 @@ fun BottomNavGraph(navController: NavHostController) {
         composable(route = BottomBarScreen.Settings.route) {
             SettingScreen()
         }
-        /*"${Screen.Details.route}/{id}/{title}/{location}"*/
-        composable(
+        /*composable(
             "${BottomBarScreen.Detalles.route}/{id}/{nombre}",
             arguments = listOf(
-                navArgument("id") { type = NavType.IntType},
-                navArgument("nombre") { type = NavType.StringType},
+                navArgument("id") { type = NavType.IntType },
+                navArgument("nombre") { type = NavType.StringType },
             )
         ) {
-            DetalleScreen(
-                it.arguments?.getInt("id") ?: 0,
-                it.arguments?.getString("nombre") ?: "name",
-            )
-        }
+            DetalleScreen(id = it.arguments?.getInt("id") ?: 0)
+        }*/
     }
 }
 /*

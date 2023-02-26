@@ -25,7 +25,8 @@ fun HomeScreen(
     Spacer(modifier = Modifier.padding(30.dp))
     PatologiasContent(
         padding = PaddingValues(top = 60.dp),
-        patologias = patologias,
+        patologiasWithSteps = patologias,
         navController = navController
     )
+
 }

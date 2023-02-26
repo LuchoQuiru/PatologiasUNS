@@ -6,6 +6,7 @@ import androidx.room.Room
 import com.example.patologiasuns.Constants.Companion.PATOLOGIAS_TABLE
 import com.example.patologiasuns.Constants.Companion.SOUNDS_TABLE
 import com.example.patologiasuns.Constants.Companion.STEPS_TABLE
+import com.example.patologiasuns.Constants.Companion.TESTDB
 import com.example.patologiasuns.feature_detalle.data.network.StepDB
 import com.example.patologiasuns.feature_detalle.data.network.StepDao
 import com.example.patologiasuns.feature_detalle.data.repository.StepRepositoryImpl
@@ -35,8 +36,9 @@ class AppModule {
     fun providePatologiaDb(
         @ApplicationContext context: Context
     ) = Room.databaseBuilder(
-        context, PatologiaDB::class.java, PATOLOGIAS_TABLE
-    ).build()
+        context, PatologiaDB::class.java, TESTDB)
+        .fallbackToDestructiveMigration()
+        .build()
 
     @Provides
     fun providePatologiaDao(

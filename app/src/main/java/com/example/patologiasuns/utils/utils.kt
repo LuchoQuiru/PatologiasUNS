@@ -14,13 +14,19 @@ class Utils {
         }
 
         fun getVirusImageWithAzar(context: Context) : Int {
-            val random = (1 .. 3).shuffled().last()
+            val random = (1 .. 6).shuffled().last()
             if(random == 1)
                 return resIdByName(context,"virusrojo","drawable")
             if(random == 2)
                 return resIdByName(context,"virusverde","drawable")
             if(random == 3)
                 return resIdByName(context,"virusazul","drawable")
+            if(random == 4)
+                return resIdByName(context,"virusrosa","drawable")
+            if(random == 5)
+                return resIdByName(context,"virusvioleta","drawable")
+            if(random == 6)
+                return resIdByName(context,"virusamarillo","drawable")
 
             return 0
         }
