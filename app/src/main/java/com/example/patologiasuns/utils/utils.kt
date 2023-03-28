@@ -30,6 +30,14 @@ class Utils {
 
             return 0
         }
+
+        fun getBluetoothDisconnected(context : Context) : Int{
+            return resIdByName(context, "bluetooth_disabled","drawable")
+        }
+
+        fun getBluetoothConnected(context : Context) : Int{
+            return resIdByName(context, "blluetooth_connected","drawable")
+        }
     }
 
 }

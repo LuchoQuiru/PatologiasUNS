@@ -7,6 +7,8 @@ import com.example.patologiasuns.Constants.Companion.PATOLOGIAS_TABLE
 import com.example.patologiasuns.Constants.Companion.SOUNDS_TABLE
 import com.example.patologiasuns.Constants.Companion.STEPS_TABLE
 import com.example.patologiasuns.Constants.Companion.TESTDB
+import com.example.patologiasuns.feature_detalle.DetalleViewModel
+import com.example.patologiasuns.feature_detalle.bluetooth.MyBluetoothService
 import com.example.patologiasuns.feature_detalle.data.network.StepDB
 import com.example.patologiasuns.feature_detalle.data.network.StepDao
 import com.example.patologiasuns.feature_detalle.data.repository.StepRepositoryImpl
@@ -27,10 +29,17 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Inject
+import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
 class AppModule {
+
+    @Provides
+    @Singleton
+    fun provideMyBluetoothService(): MyBluetoothService {
+        return MyBluetoothService()
+    }
 
     @Provides
     fun providePatologiaDb(

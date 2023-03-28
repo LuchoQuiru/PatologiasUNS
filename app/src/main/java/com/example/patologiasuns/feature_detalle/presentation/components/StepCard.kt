@@ -20,7 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.patologiasuns.feature_user.domain.model.Step
 
-@Preview
+/*@Preview
 @Composable
 fun test() {
     val step = Step(
@@ -32,7 +32,7 @@ fun test() {
     StepCard(
         step
     )
-}
+}*/
 
 @Composable
 fun StepCard(step: Step) {
